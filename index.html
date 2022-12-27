@@ -49,16 +49,22 @@
 			console.log(ul)
 			let li=document.createElement("li")
 			const d=new Date()
-			var r=d.getHours();
-			const i=d.getMinutes();
+			var h=d.getHours();
+			const m=d.getMinutes();
 			li.innerHTML=`
-			<span onclick="todo()">${newMsg} ${r}:${i}</span>
-			<button name="deleteButton" ><i class="fas fa-trash"></i></button>
+			<span class="newColor">${newMsg}</span>
+			<button name="deleteButton" id="delete" class="btn btn-red"(click)="removeItem()">
+			<i class="fas fa-trash"></i></button>
+			<span>Time:-${h}:${m}</span>
 			`
 			li.classList.add("listType")
 			ul.appendChild(li)	
 		}
-		function delete(newMsg){}
+		function delete1(del){
+			if(del===newColor){
+
+			}
+		}
 	</script>
 	<div class="cssEdit">
 <input id="toDo" type="text" placeholder="Enter Todo text">
